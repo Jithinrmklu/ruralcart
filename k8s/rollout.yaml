@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: ruralcart
+  labels:
+    app: ruralcart
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: ruralcart
+  template:
+    metadata:
+      labels:
+        app: ruralcart
+    spec:
+      containers:
+        - name: ruralcart
+          image: ruralcart:v1.0.1
+          ports:
+            - containerPort: 80
+  strategy:
+    blueGreen:
+      activeService: ruralcart-stable
+      previewService: ruralcart-preview
+      autoPromotionEnabled: false  # Manual promotion required
