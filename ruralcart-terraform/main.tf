@@ -29,7 +29,7 @@ resource "kubernetes_deployment" "ruralcart" {
       spec {
         container {
           name  = "ruralcart"
-          image = "ruralcart:dev"
+          image = "ruralcart:v1.0.0"
           port {
             container_port = 80
           }
