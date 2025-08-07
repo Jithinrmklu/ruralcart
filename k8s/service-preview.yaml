@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ruralcart
+  name: ruralcart-preview
   labels:
     app: ruralcart
 spec:
@@ -9,6 +9,6 @@ spec:
   selector:
     app: ruralcart
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
+    - protocol: TCP
+      port: 80
+      targetPort: 80

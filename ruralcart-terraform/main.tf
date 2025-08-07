@@ -11,7 +11,7 @@ resource "kubernetes_deployment" "ruralcart" {
   }
 
   spec {
-    replicas = 2
+    replicas = 1
 
     selector {
       match_labels = {
@@ -29,7 +29,7 @@ resource "kubernetes_deployment" "ruralcart" {
       spec {
         container {
           name  = "ruralcart"
-          image = "ruralcart:v1.0.0"
+          image = "ruralcart:v1.0.1"
           port {
             container_port = 80
           }
