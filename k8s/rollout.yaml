@@ -15,6 +15,8 @@ spec:
       labels:
         app: ruralcart
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
         - name: ruralcart
           image: ghcr.io/jithinrmklu/ruralcart:bfb85d2
