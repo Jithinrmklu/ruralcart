@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: ruralcart
-          image: ruralcart:v1.0.1
+          image: ghcr.io/jithinrmklu/ruralcart:bfb85d2
           ports:
             - containerPort: 80
   strategy:
