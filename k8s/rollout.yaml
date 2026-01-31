@@ -19,7 +19,7 @@ spec:
         - name: ghcr-secret
       containers:
         - name: ruralcart
-          image: ghcr.io/jithinrmklu/ruralcart:bfb85d2
+          image: ghcr.io/jithinrmklu/ruralcart:27f9590
           ports:
             - containerPort: 80
   strategy:
