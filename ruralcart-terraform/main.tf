@@ -11,7 +11,7 @@ resource "kubernetes_deployment" "ruralcart" {
   }
 
   spec {
-    replicas = 1
+    replicas = 2
 
     selector {
       match_labels = {
